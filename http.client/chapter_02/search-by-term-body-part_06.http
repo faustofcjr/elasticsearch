@@ -1,0 +1,13 @@
+# APPLYING AGGREGATIONS
+GET http://localhost:9200/get-together/group/_search HTTP/2.0
+Content-Type: application/json
+
+{
+    "aggs": {
+        "organizers": {
+            "terms": {
+                "field": "organizer"
+            }
+        }
+    }
+}

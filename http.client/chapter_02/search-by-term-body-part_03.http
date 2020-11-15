@@ -1,0 +1,10 @@
+GET http://localhost:9200/get-together/_search HTTP/2.0
+Content-Type: application/json
+
+{
+    "query": {
+        "query_string": {
+            "query": "name: elasticsearch AND name:san AND name: francisco"
+        }
+    }
+}

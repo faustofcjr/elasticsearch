@@ -1,0 +1,2 @@
+GET http://localhost:9200 HTTP/2.0
+# Content-Type: "application/json"

@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  logstash:
+    image: logstash:7.9.3
+    
+  elasticsearch:
+    image: elasticsearch:7.9.3
+    container_name: elasticsearch
+    ports:
+      - 9200:9200
+      - 9300:9300
+    environment:
+      discovery.type: single-node
+    networks:
+      - elasticsearch_network
+
+networks:
+  elasticsearch_network:

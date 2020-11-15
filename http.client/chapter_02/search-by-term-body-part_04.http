@@ -1,0 +1,11 @@
+# CHOOSING THE RIGHT QUERY TYPE
+GET http://localhost:9200/get-together/_search HTTP/2.0
+Content-Type: application/json
+
+{
+    "query": {
+        "term": {
+            "name": "elasticsearch"
+        }
+    }
+}

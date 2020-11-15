@@ -1,0 +1,2 @@
+GET http://localhost:9200/get-together/_search?q=elasticsearch HTTP/2.0
+# Content-Type: "application/json"
