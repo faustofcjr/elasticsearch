@@ -2,6 +2,18 @@ version: "3.8"
 services:
   logstash:
     image: logstash:7.9.3
+    networks:
+      - elasticsearch_network
+  
+  cerebro:
+    image: lmenezes/cerebro
+    container_name: cerebro-elasticsearch
+    ports:
+      - 9000:9000
+    # environment:
+      #  CEREBRO_PORT: 8080
+    networks:
+      - elasticsearch_network
     
   elasticsearch:
     image: elasticsearch:7.9.3
